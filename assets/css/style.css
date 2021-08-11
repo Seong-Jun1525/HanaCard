@@ -25,6 +25,7 @@
 /* footer Layout */
 #footer_notice {
     width: 100%; height: 71px; background-color: #fff; line-height: 71px;
+    border-bottom: 1px solid #e6e6e6;
 }
 #footer_info {
     width: 100%; height: 240px; background-color: #f7f8f9;
@@ -353,9 +354,9 @@
     width: 300px; height: 188px;  background: #43587d;
 }
 
-.event_box2 {
+/* .event_box2 {
     
-}
+} */
 
 .event_box2 .eb_banner4 {
     position: relative; width: 600px; height: 376px; background: #fff;
@@ -470,9 +471,9 @@ ie8은 이게 먹히지 않는다. 그래서 html tag안에 class를 주고 css�
     font-size: 22px; color: #fff; padding: 40px 0;
 }
 
-.event_box3 .eb_slider2 {
+/* .event_box3 .eb_slider2 {
 
-}
+} */
 
 .event_box3 .eb_slider2 p {
     color: #fff; font-size: 16px; padding: 35px 30px 15px 30px;
@@ -571,6 +572,10 @@ ie8은 이게 먹히지 않는다. 그래서 html tag안에 class를 주고 css�
     padding: 0 0 0 290px; font-size: 14px; color: #666;
 }
 
+#app .app_left .al_txt li {
+    padding-bottom: 30px;
+}
+
 #app .app_left .al_txt strong {
     font-size: 16px; color: #000; display: block;
     line-height: 34px;
@@ -636,9 +641,9 @@ ie8은 이게 먹히지 않는다. 그래서 html tag안에 class를 주고 css�
     display: inline-block; margin-left: 5px;  vertical-align: 2px;
 }
 
-.notice ul {
+/* .notice ul {
     
-}
+} */
 
 .notice li {
     display: inline-block; width: 400px;
@@ -663,4 +668,110 @@ ie8은 이게 먹히지 않는다. 그래서 html tag안에 class를 주고 css�
 
 .notice .notice_btn:hover {
     border-color: #000;
+}
+
+/* footer */
+/* .info {
+
+} */
+
+.info a {
+    color: #666;
+}
+
+.info a:hover {
+    color: #00907f;
+}
+.info .f_nav li {
+    display: inline-block; padding: 20px 0;
+}
+
+.info .f_nav li a {
+    padding: 10px; display: inline-block; font-size: 16px;
+}
+
+.info .f_nav li:first-child a {
+    padding-left: 0;
+}
+
+.info .f_nav li a strong {
+    color: #000; font-weight: bold;
+}
+
+.info .f_nav li a strong:hover {
+    color: #00907f;
+}
+
+.info .f_address {
+    font-size: 0; color: #666; line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.info .f_address span {
+    padding: 5px 8px; font-size: 13px;
+}
+/* 
+.info .f_icon {
+
+} */
+
+.info .f_icon ul {
+    display: flex;
+}
+
+.info .f_icon li {
+    padding: 5px 15px 5px 45px; margin-right: 15px;
+}
+
+.info .f_icon li.fi1 {
+    background: url(../img/ico_footer_mark10.png) no-repeat 0 5px; padding-left: 45px;
+}
+.info .f_icon li.fi2 {
+    background: url(../img/ico_footer_mark11.png) no-repeat 0 5px;
+}
+.info .f_icon li.fi3 {
+    background: url(../img/ico_footer_mark12.png) no-repeat 0 5px; padding-left: 60px;
+}
+.info .f_icon li.fi4 {
+    background: url(../img/ico_footer_mark06.png) no-repeat 0 5px; padding-left: 60px;
+}
+.info .f_icon li.fi5 {
+    background: url(../img/ico_footer_mark07.png) no-repeat 0 5px;
+}
+
+.info .family_site {
+    position: absolute; right: 0; top: 20px; font-size: 14px; padding: 7px 20px;
+    border: 1px solid #e6e6e6; background: #fafafa; color: #222; border-radius: 3px;
+}
+
+.info .family_site i {
+    padding-left: 20px;
+}
+
+.info .sns_icon {
+    position: absolute; right: 0; top: 70px;
+}
+
+.info .sns_icon li {
+    margin: 4px 0 0 6px; float: left;
+}
+
+.info .sns_icon a {
+    width: 25px; height: 25px; display: block;
+}
+
+.info .sns_icon .btn_facebook {
+    background: url(../img/btn_footer_sns_facebook.png) no-repeat;
+}
+.info .sns_icon .btn_kakaoch {
+    background: url(../img/btn_footer_sns_kakaoch.png) no-repeat;
+}
+.info .sns_icon .btn_youtube {
+    background: url(../img/btn_footer_sns_youtube.png) no-repeat;
+}
+.info .sns_icon .btn_instagram {
+    background: url(../img/btn_footer_sns_instagram.png) no-repeat;
+}
+.info .sns_icon .btn_naverpost {
+    background: url(../img/btn_footer_sns_naverpost.png) no-repeat;
 }
