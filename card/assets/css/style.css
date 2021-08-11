@@ -1,0 +1,666 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+/* font-family: 'Noto Sans KR', sans-serif; 100, 300, 400, 500, 700, 900*/
+
+/* Layout */
+#wrap { width: 100%; }
+#header { background-color: #fff; }
+#banner { width: 100%; height: 470px; background-color: #a0d1ee; }
+/* #contents { }
+#footer {  }  */
+
+/* container */
+.container {
+    width: 1200px; margin: 0 auto; position: relative; /* background-color: rgba(0, 0, 0, 0.4);*/ 
+}
+
+/* cont Layout */
+#cont1 {
+    width: 100%; height: 940px; background-color: #f5f6f8;
+}
+#cont2 {
+    width: 100%; height: 555px; background-color: #efefef;
+}
+
+/* footer Layout */
+#footer_notice {
+    width: 100%; height: 71px; background-color: #fff; line-height: 71px;
+}
+#footer_info {
+    width: 100%; height: 240px; background-color: #f7f8f9;
+}
+
+/* header */
+.header {
+    overflow: hidden; /* 내용을 잡아줌 */
+}
+.header li {
+    position: relative;
+    /* padding: 0 14px; */
+}
+.header li:before {
+    content: ""; width: 1px; height: 10px; position: absolute;  right: 0; top: 21px; background-color: #ccc; 
+}
+.header li.last:before {
+    width: 0; height: 0;
+}
+.header li a {
+    display: block; padding: 8px 15px; font-size: 13px; margin: 7px 0;
+    /* 그냥 상하에 padding값을 주면 인라인 구조이기 때문에 먹히지 않는다 그래서 display:block;을 써야한다. */
+    /* 이렇게 되면 height값이 필요가없다. */
+}
+.header .list1 {
+    float: left; /* 왼쪽 정렬 */ overflow: hidden;
+}
+.header .list1 li {
+    float: left; /* 여기에 float : left를 주면 ul에 overflow:hidden을 줘야 함 */
+}
+.header .list1 li.green a {
+    background: #00907f; color: #fff; border-radius: 3px;
+}
+.header .list1 li a { color: #333; }
+.header .list2 {
+    float: right; /* 오른쪽 정렬 */ overflow: hidden;
+}
+.header .list2 li {
+    float: left;
+}
+.header .list2 li:last-child a {
+    padding-right: 0;
+}
+.header .list2 li.log {
+    padding-right: 13px;
+}
+.header .list2 li.log a {
+    border: 1px solid #ccc; border-radius: 3px; padding: 3px 10px; margin: 11px 0;
+}
+.header .list2 li a { color: #797979; }
+
+/* ban_right */
+.ban_right {
+    width: 600px; position: absolute; right: 0; top: 50px;
+}
+.ban_right .br_tit {
+    background: #fff; height: 160px; padding: 45px 190px 60px 100px;
+}
+.ban_right .br_tit h3 {
+    font-size: 36px; letter-spacing: -1px; line-height: 44px;
+    font-weight: 700;
+}
+.ban_right .br_tit p {
+    position: relative; padding-top: 50px; font-size: 14px;
+}
+.ban_right .br_tit p:before {
+    content: ''; width: 30px; height: 2px; background-color: #00907f;
+    position: absolute; left: 0; top: 24px;
+}
+.ban_right .br_tit p strong {
+    color: #00907f;
+}
+.ban_right .br_tit .login_btn { 
+    position: absolute; right: 60px; top: 55px;
+}
+/* .ban_right .br_tit .login_btn ul {  } */
+.ban_right .br_tit .login_btn li {
+    margin-bottom: 1px;
+}
+.ban_right .br_tit .login_btn li a {
+    width: 80px; height: 60px; display: block; text-align: center;
+    color: #fff; font-size: 14px; padding-top: 20px;
+    transition: background 0.3s ease;
+}
+.ban_right .br_tit .login_btn li.lb1 a {
+    background-color: #db3360;
+}
+.ban_right .br_tit .login_btn li.lb1 a:hover{
+    background: #c4204c;
+}
+.ban_right .br_tit .login_btn li.lb2 a {
+    background-color: #3c3f44;
+}
+.ban_right .br_tit .login_btn li.lb2 a:hover{
+    background-color: #333;
+}
+.ban_right .br_btn {
+    background-color: #00907f; height: 50px; margin-top: 25px;
+}
+.ban_right .br_btn ul {
+    overflow: hidden;
+}
+.ban_right .br_btn li {
+    /*
+    display: table-cell; <- 이것을 사용하게 되면 가운데 정렬이 아닌 중간 정렬이 됨.
+    vertical-align: middle; height: 50px;
+    */
+    position: relative;
+    float: left; width: 25%; text-align: center; line-height: 50px;
+    font-size: 14px;
+}
+.ban_right .br_btn li:before {
+    content: ''; width: 1px; height: 14px; background-color: #62bcd1; position: absolute; left: 0; top: 19px;
+}
+.ban_right .br_btn li:first-child:before {
+    width: 0; height: 0;
+}
+.ban_right .br_btn li a {
+    color: #fff; font-weight: 500;
+}
+/* cont1 Layout */
+#nav {
+    width: 100%; background: #fff;
+    position: absolute; left: 0; top: -50px; padding: 30px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+#nav .gnb {
+    padding-left: 35px;
+}
+#nav .gnb li {
+    display: inline; padding: 10px;
+}
+#nav .gnb li a {
+    font-size: 17px; padding: 10px 16px; display: inline-block;
+    transition: all 0.3s ease;
+}
+#nav .gnb li a:hover {
+    background-color: #00907f; color: #fff; border-radius: 3px;
+}
+#nav .gnb_right {
+    position: absolute; right: 50px; top: 30px; overflow: hidden;
+}
+#nav .gnb_right li {
+    float: left; margin-right: 10px;
+}
+#nav .gnb_right li a {
+    display: block; padding: 11px 20px;
+    font-size: 14px; transition: all 0.3s ease;
+}
+#nav .gnb_right li.gr1 a {
+    border: 1px solid #e1e1e1; border-radius: 3px;
+}
+#nav .gnb_right li.gr1 a:hover {
+    background-color: #f4f4f4; color: #000;
+}
+#nav .gnb_right li.gr2 a {
+    border: 1px solid #404b57; background-color: #404b57;
+    color: #fff; border-radius: 3px;
+}
+#nav .gnb_right li.gr2 a:hover {
+    background-color: #000;
+}
+#nav .gnb_right li.gr2 i {
+    padding-left: 10px;
+}
+#nav .gnb_search {
+    position: absolute; right: 320px; top: 30px; font-size: 15px;
+}
+#nav .gnb_search i {
+    padding-left: 5px;
+}
+#nav .gnb_event {
+    position: absolute; left: 20px; top: -35px;
+    background-color: #3c3f44; color: #fff; text-transform: uppercase;
+    line-height: 30px; font-size: 14px; padding: 3px 23px 2px 23px;
+}
+#nav .gnb_event i {
+    padding-left: 10px;
+}
+
+
+
+
+/* card */
+#card {
+    overflow: hidden; padding-top: 80px;
+}
+#card .card_img {
+    float: left; width: 50%; height: 285px; background-color: #fff;
+}
+#card .card_desc {
+    float: left; width: 50%; height: 285px; background-color: #eaebef;
+}
+
+/* card_img */
+.card_img {
+    padding: 18px 50px 0; box-sizing: border-box;
+}
+.ie8 .card_img {
+    padding: 18px 27px 0;
+}
+.card_img h1 {
+    font-size: 18px; color: #000; font-weight: 500; padding-bottom: 11px;
+
+}
+.card_img .card_banner {
+    margin-bottom: 30px;
+}
+.card_img .card_banner ul {
+    overflow: hidden;
+}
+.card_img .card_banner li {
+    float: left; width: 146px; margin-right: 30px; text-align: center;
+}
+.card_img .card_banner li:last-child {
+    margin-right: 0;
+}
+.card_img .card_banner li a em {
+    font-size: 14px; padding-top: 8px; display: block;
+}
+.card_img .card_banner li img {
+    width: 100%;
+}
+/* .card_img .card_link {
+
+} */
+.card_img .card_link ul {
+    overflow: hidden;
+}
+.card_img .card_link li {
+    float: left; margin-right: 3px;
+}
+.card_img .card_link li:last-child {
+    margin-right: 0;
+}
+.card_img .card_link li a {
+    border: 1px solid #e8e8e8; padding: 10px 10px; display: block;
+    font-size: 15px; text-align: center; border-radius: 3px;
+    box-sizing: border-box; transition: all 0.3s ease;
+}
+.card_img .card_link li a:hover { 
+    border-color: #666; color: #000;
+}
+
+/* card_desc */
+.card_desc {
+    padding: 50px 30px 0; box-sizing: border-box; text-align: center;
+}
+
+.card_desc dt {
+    font-size: 15px; color: #777; font-weight: 500;
+}
+
+.card_desc dd.cd1 {
+    margin: 26px 0 37px 0; font-size: 23px; color: #000;
+}
+
+.card_desc dd.cd1:before {
+    content: '"'; color: #00907f;
+}
+.card_desc dd.cd1:after {
+    content: '"'; color: #00907f;
+}
+
+.card_desc dd.cd2 li {
+    display: inline; margin: 0 1px;
+}
+
+.card_desc dd.cd2 li a {
+    background: #fff; padding: 10px 30px; display: inline-block;
+    border: 1px solid #fff; border-radius: 3px; font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.card_desc dd.cd2 li a:hover {
+    border-color: #bbb; color: #000;
+}
+
+/* event Layout*/
+#event {
+    overflow: hidden; margin-top: 10px;
+}
+
+#event .event_box1 {
+    float: left;
+}
+
+#event .event_box2 {
+    float: left;
+}
+
+#event .event_box3 {
+    float: left;
+}
+
+/* event_box */
+.event_box1 {
+    text-align: center; color: #fff;
+}
+
+.event_box1 .eb_desc {
+    font-size: 16px; font-weight: 300;
+}
+
+.event_box1 .eb_tit {
+    font-size: 20px;
+}
+
+.event_box1 div {
+    padding-top: 50px; box-sizing: border-box;
+}
+
+.event_box1 i {
+    font-size: 35px; padding-bottom: 15px; display: inline-block;
+}
+
+.event_box1 .eb_banner1 {
+    width: 300px; height: 188px;  background: #01937f;
+}
+
+.event_box1 .eb_banner2 {
+    width: 300px; height: 188px;  background: #766e9c;
+}
+
+.event_box1 .eb_banner3 {
+    width: 300px; height: 188px;  background: #43587d;
+}
+
+.event_box2 {
+    
+}
+
+.event_box2 .eb_banner4 {
+    position: relative; width: 600px; height: 376px; background: #fff;
+}
+
+.event_box2 .eb_banner4 .eb_icon {
+    position: absolute; left: 60px; top: 70px;
+}
+
+.event_box2 .eb_banner4 .eb_icon ul {
+    overflow: hidden;
+}
+
+.event_box2 .eb_banner4 .eb_icon li {
+    float: left;
+}
+
+.event_box2 .eb_banner4 .eb_icon li a {
+    font-size: 13px; padding: 5px 12px; display: block; border-radius: 3px;
+}
+
+.event_box2 .eb_banner4 .eb_icon li.ei1 a {
+    background-color: #00907f;  margin-right: 8px;
+    text-transform: uppercase; border: 1px solid #00907f; color: #fff;
+}
+
+.event_box2 .eb_banner4 .eb_icon li.ei1 a i {
+    padding-left: 10px;
+}
+
+.event_box2 .eb_banner4 .eb_icon li.ei2 a {
+    border: 1px solid #ccc; transition: all 0.3s ease;
+}
+
+.event_box2 .eb_banner4 .eb_icon li.ei2 a:hover {
+    border-color: #000; color: #000;
+}
+
+.event_box2 .eb_banner4 .eb_slider {
+    padding: 140px 80px 80px 60px;
+    background: url(../img/event1.PNG) no-repeat 300px center;
+}
+
+.event_box2 .eb_banner4 .eb_slider p {
+    font-size: 16px;
+}
+
+.event_box2 .eb_banner4 .eb_slider h4 {
+    font-size: 24px; padding: 30px 0 45px; position: relative;
+}
+
+.event_box2 .eb_banner4 .eb_slider h4:before {
+    content: ''; width: 30px; height: 2px; background: #000;
+    position: absolute; left: 0; top: 15px;
+}
+
+.event_box2 .eb_banner4 .eb_slider span {
+    color: #676767; font-size: 13px;
+}
+
+.event_box2 .eb_banner5 {
+    position: relative; width: 600px; height: 188px;
+    background: #8cc7e9 url(../img/money.PNG) no-repeat 150px 60px;
+}
+
+.event_box2 .eb_banner5 h4 {
+    position: absolute; left: 60px; top: 95px; font-size: 20px;
+}
+
+.event_box2 .eb_banner5 .money {
+    margin: 0 30px 0 260px; padding-top: 55px; overflow: hidden;
+}
+
+.event_box2 .eb_banner5 .money li {
+    float: left; margin-right: 8px; margin-bottom: 8px;
+}
+
+.event_box2 .eb_banner5 .money li a {
+    display: block; background: #fff; padding: 9px 5px;
+    border-radius: 3px; font-size: 13px; width: 140px; text-align: center;
+    transition: all 0.3 ease;
+}
+
+.event_box2 .eb_banner5 .money li a:hover {
+    background-color: #f4f4f4;
+}
+
+/*
+ie8은 이게 먹히지 않는다. 그래서 html tag안에 class를 주고 css를 작성해야한다.
+.event_box2 .eb_banner5 .money li:nth-child(2n-1) a {
+    width: 100px;
+}
+*/
+
+.event_box2 .eb_banner5 .money li.w100 a {
+    width: 100px;
+}
+
+
+.event_box2 .eb_banner5 .point {
+    background-color: #43587d;
+    text-transform: uppercase; color: #fff;
+    position: absolute; left: 60px; top: 55px;
+    font-size: 13px; padding: 5px 12px; display: block; border-radius: 3px;
+}
+
+.event_box3 {
+    width: 300px; height: 564px; background: #d7567e; text-align: center;
+}
+
+.event_box3 h4 {
+    font-size: 22px; color: #fff; padding: 40px 0;
+}
+
+.event_box3 .eb_slider2 {
+
+}
+
+.event_box3 .eb_slider2 p {
+    color: #fff; font-size: 16px; padding: 35px 30px 15px 30px;
+}
+
+.event_box3 .eb_slider2 a {
+    background: #fff; padding: 10px 50px; display: inline-block;
+    border-radius: 3px; font-size: 16px;
+}
+
+/* life */
+#life {
+    height: 330px; background: url(../img/mc_service_bg01.png) no-repeat;
+    overflow: hidden;
+}
+
+#life h3 {
+    width: 50%; float: left; height: 215px; padding: 60px 30px 30px;
+    box-sizing: border-box; font-size: 50px; color: #333;
+    text-transform: uppercase; letter-spacing: 15px; font-weight: 500;
+}
+
+#life h3 em {
+    font-size: 18px; color: #000; display: block; letter-spacing: 1px;
+}
+
+#life .life_menu {
+    width: 50%; float: left; margin-top: 60px;
+}
+
+#life .life_menu li {
+    float: left; width: 25%;
+}
+
+#life .life_menu li a {
+    display: block; width: 100px; height: 100px; border-radius: 50%;
+    background: #ddd; text-align: center; line-height: 100px;
+    font-size: 16px; color: #000;
+}
+
+#life .life_menu li a:hover {
+    background: #cc3d63; color: #fff;
+}
+
+#life .life_btn {
+    width: 100%; float: left; background: #fff; text-align: center;
+    margin-top: 20px;
+}
+
+#life .life_btn ul {
+    overflow: hidden;
+}
+
+#life .life_btn li {
+    float: left; width: 16.6666%; position: relative;
+}
+
+#life .life_btn li:first-child::after {
+    width: 0; height: 0;
+}
+
+#life .life_btn li:after {
+    content: ''; width: 1px; height: 14px; background: #ccc;
+    position: absolute;
+    left: 0; top: 19px;
+}
+
+#life .life_btn li a {
+    display: block; padding: 13px 10px; font-size: 16px; color: #333;
+}
+
+/* app */
+#app {
+    background: #fff; width: 100%; overflow: hidden;
+}
+
+#app .app_left {
+    float: left; width: 49%; margin-right: 1%; height: 200px;
+    background: url(../img/mc_service_banner01_img.jpg) no-repeat 50px 43px; 
+}
+
+#app .app_left .al_btn {
+    overflow: hidden; padding: 45px 10px 10px 290px;
+}
+
+#app .app_left .al_btn li {
+    float: left; margin-right: 20px; border: 1px solid #eaeaea;
+    width: 48px; height: 48px;
+}
+
+#app .app_left .al_btn li img {
+    border-radius: 10px;
+}
+
+#app .app_left .al_txt {
+    padding: 0 0 0 290px; font-size: 14px; color: #666;
+}
+
+#app .app_left .al_txt strong {
+    font-size: 16px; color: #000; display: block;
+    line-height: 34px;
+}
+
+#app .app_right {
+    float: left; width: 50%; height: 200px; background-color: #ddd;
+    overflow: hidden;
+}
+
+#app .app_right i {
+    display: block; font-size: 35px; padding-bottom: 25px;
+}
+
+#app .app_right .ap_ban1 {
+    float:  left; width: 25%; background: #2f4359; height: 130px;
+    text-align: center; font-size: 16px; color: #fff; padding-top: 70px;
+}
+
+#app .app_right .ap_ban2 {
+    float: left; width: 25%; background: #00907f; height: 130px;
+    text-align: center; font-size: 16px; color: #fff; padding-top: 70px;
+}
+
+#app .app_right .ap_ban3 {
+    float: left; width: 50%; background-color: #fff; height: 200px;
+    padding: 20px; box-sizing: border-box; position: relative;
+}
+
+#app .app_right .ap_ban3 .ban3_icon {
+    position: absolute; margin: auto 0; top: 25%; left: 10%;
+}
+
+#app .app_right .ap_ban3 .ban3_icon i {
+    font-size: 45px;
+}
+
+#app .app_right .ap_ban3 .ban3_text {
+    padding: 20px 20px 30px 80px; font-size: 14px;
+    color: #666; border-bottom: 1px solid #ddd;
+}
+
+#app .app_right .ap_ban3 .ban3_text h5 {
+    font-size: 16px; color: #000; padding-bottom: 5px;
+}
+
+#app .app_right .ap_ban3 .ban3_slider {
+    text-align: center; font-size: 16px; padding: 10px 0 0 0;
+}
+
+/* notice */
+.notice {
+    display: flex; position: relative;
+}
+
+.notice h3 {
+    font-size: 15px; margin-right: 30px;
+}
+
+.notice h3 i {
+    border: 1px solid #ccc; border-radius: 2px; font-size: 10px;
+    padding: 4px; width: 8px; height: 8px; line-height: 8px;
+    display: inline-block; margin-left: 5px;  vertical-align: 2px;
+}
+
+.notice ul {
+    
+}
+
+.notice li {
+    display: inline-block; width: 400px;
+    text-overflow: ellipsis; white-space: nowrap; overflow: hidden; /* 한줄 효과 */
+    margin-right: 50px;
+}
+
+.notice li a {
+    font-size: 15px; color: #666; position: relative; padding-left: 8px;
+}
+
+.notice li a:before {
+    content: ''; width: 3px; height: 3px; background: #666; position: absolute;
+    left: 0; top: 8px;
+}
+
+.notice .notice_btn {
+    position: absolute; right: 0; top: 17px; border: 1px solid #e6e6e6;
+    border-radius: 3px; font-size: 14px; line-height: 20px;
+    display: block; padding: 7px 20px; transition: all 0.3s ease;
+} 
+
+.notice .notice_btn:hover {
+    border-color: #000;
+}
